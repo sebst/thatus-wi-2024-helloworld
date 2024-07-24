@@ -37,7 +37,7 @@ jobs:
         run: |
           export VERSION="${VERSION:1}"
           sudo mkdir -p /pkg/DEBIAN
-          sudo chmod 0755 -R /pkg
+          sudo chmod a+rwx -R /pkg
           echo "Package: helloworld" > /pkg/DEBIAN/control
           echo "Version: ${VERSION}" >> /pkg/DEBIAN/control
           echo "Section: base" >> /pkg/DEBIAN/control
@@ -48,7 +48,8 @@ jobs:
           echo "Description: Hello World" >> /pkg/DEBIAN/control
           mkdir -p /pkg/usr/bin 
           cp /usr/local/bin/helloworld /pkg/usr/bin/ 
-          dpkg-deb --build /pkg helloworld-${VERSION}.deb
+          sudo chmod 0755 -R /pkg
+          sudo dpkg-deb --build /pkg helloworld-${VERSION}.deb
 
       - name: Create Release
         id: create_release
