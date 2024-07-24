@@ -7,7 +7,7 @@ This repository demonstrates the use of GitHub Actions to
 - Creates an Apt repository on GitHub Pages
 
 
-## Triggering the workflow
+## Triggering the workflow to build and deploy the Debian package
 - workflow is triggered by a tag starting with `v` followed by a number
 
 ## Repo 
@@ -22,4 +22,6 @@ docker build -t my-helloworld-image .
 docker run --rm my-helloworld-image 
 ```
 
+## Testing with an Action:
 
+- The above Docker commands can be run in a GitHub Action [here](https://github.com/sebst/thatus-wi-2024-helloworld/actions/workflows/run_docker.yml).

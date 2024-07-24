@@ -4,7 +4,7 @@ on:
     workflow_dispatch:
 
 jobs:
-    build:
+    run_docker_with_apt_repo:
         runs-on: ubuntu-24.04
     
         steps:
