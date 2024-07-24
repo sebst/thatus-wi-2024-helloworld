@@ -57,3 +57,16 @@ jobs:
         with:
           artifacts: "helloworld-${{ github.ref_name }}.deb,helloworld-${{ github.ref_name }}"
 
+      - name: "Make APT Repo"
+        uses: jrandiny/apt-repo-action@v1
+        with:
+            github_token: ${{ secrets.PAT }}
+            arch: |
+                amd64
+            version: |
+                noble
+            file: helloworld-${{ github.ref_name }}.deb
+            file_target_version: noble
+            public_key: ${{ secrets.PUBLIC }}
+            private_key: ${{ secrets.PRIVATE }}
+
