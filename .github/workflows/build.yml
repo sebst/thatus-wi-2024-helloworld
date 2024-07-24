@@ -23,8 +23,7 @@ jobs:
             build-essential \
             cmake \
             tar \
-            dpkg \
-            && rm -rf /var/lib/apt/lists/*
+            dpkg
 
       - name: Build
         run: |
@@ -36,7 +35,8 @@ jobs:
         env:
           VERSION: ${{ github.ref }}
         run: |
-          mkdir -p /pkg/DEBIAN && \
+          sudo mkdir -p /pkg/DEBIAN && \
+          sudo chmod a+rwx -R /pkg && \
             echo "Package: helloworld\nVersion: ${VERSION}\nSection: base\nPriority: optional\nArchitecture: amd64\nDepends: \nMaintainer: Your Name <you@example.com>\nDescription: A hello-world program" > /pkg/DEBIAN/control && \
             mkdir -p /pkg/usr/bin && \
             cp /src/build/helloworld /pkg/usr/bin/ && \
