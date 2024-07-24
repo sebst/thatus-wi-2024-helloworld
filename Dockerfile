@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 COPY . /src
-WORKDIR /src/src
+WORKDIR /src
 
 RUN mkdir -p build && cd build && \
     cmake .. && \
