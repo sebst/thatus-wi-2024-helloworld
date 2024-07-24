@@ -1,7 +1,6 @@
 name: Build
 
 on:
-  workflow_dispatch:
   push:
     tags:
       - 'v*'
@@ -51,9 +50,10 @@ jobs:
           sudo chmod 0755 -R /pkg
           sudo dpkg-deb --build /pkg helloworld-${GITHUB_REF_NAME}.deb
           sudo chmod a+rwx helloworld-${GITHUB_REF_NAME}.deb
+          cp /usr/local/bin/helloworld ./helloworld-${GITHUB_REF_NAME}
 
       - name: "Relase"
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "helloworld-${{ github.ref_name }}.deb"
+          artifacts: "helloworld-${{ github.ref_name }}.deb,helloworld-${{ github.ref_name }}"
 
