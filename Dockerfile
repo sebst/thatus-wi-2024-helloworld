@@ -3,6 +3,7 @@ FROM ubuntu:24.04
 
 ENV TZ=UTC
 ENV DEBIAN_FRONTEND noninteractive
+ENV VERSION=1.0.0
 
 RUN apt-get update && apt-get install -y \
     build-essential \
