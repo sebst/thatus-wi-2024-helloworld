@@ -1,7 +1,0 @@
-/Users/sebst/Dropbox/Code/sebst/thatus-wi-2024-helloworld/build/CMakeFiles/helloworld.dir
-/Users/sebst/Dropbox/Code/sebst/thatus-wi-2024-helloworld/build/CMakeFiles/edit_cache.dir
-/Users/sebst/Dropbox/Code/sebst/thatus-wi-2024-helloworld/build/CMakeFiles/rebuild_cache.dir
-/Users/sebst/Dropbox/Code/sebst/thatus-wi-2024-helloworld/build/CMakeFiles/list_install_components.dir
-/Users/sebst/Dropbox/Code/sebst/thatus-wi-2024-helloworld/build/CMakeFiles/install.dir
-/Users/sebst/Dropbox/Code/sebst/thatus-wi-2024-helloworld/build/CMakeFiles/install/local.dir
-/Users/sebst/Dropbox/Code/sebst/thatus-wi-2024-helloworld/build/CMakeFiles/install/strip.dir
