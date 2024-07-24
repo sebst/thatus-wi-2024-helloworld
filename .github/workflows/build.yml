@@ -13,7 +13,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
       - name: Set up env
         env: 
             TZ: UTC
@@ -53,9 +52,10 @@ jobs:
           sudo dpkg-deb --build /pkg helloworld-${GITHUB_REF_NAME}.deb
           sudo chmod a+rwx helloworld-${GITHUB_REF_NAME}.deb
 
-      - uses: ncipollo/release-action@v1
-      with:
-        artifacts: "helloworld-${{ github.ref_name }}.deb"
+      - name: "Relase"
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "helloworld-${{ github.ref_name }}.deb"
 
           
     #   - name: Create Release
