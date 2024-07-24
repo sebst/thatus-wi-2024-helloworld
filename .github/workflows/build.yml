@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout code
@@ -35,12 +35,19 @@ jobs:
         env:
           VERSION: ${{ github.ref }}
         run: |
-          sudo mkdir -p /pkg/DEBIAN && \
-          sudo chmod a+rwx -R /pkg && \
-            echo "Package: helloworld\nVersion: ${VERSION}\nSection: base\nPriority: optional\nArchitecture: amd64\nDepends: \nMaintainer: Your Name <you@example.com>\nDescription: A hello-world program" > /pkg/DEBIAN/control && \
-            mkdir -p /pkg/usr/bin && \
-            cp /usr/local/bin/helloworld /pkg/usr/bin/ && \
-            dpkg-deb --build /pkg helloworld-${VERSION}.deb
+          sudo mkdir -p /pkg/DEBIAN
+          sudo chmod a+rwx -R /pkg
+          echo "Package: helloworld" > /pkg/DEBIAN/control
+          echo "Version: ${VERSION}" >> /pkg/DEBIAN/control
+          echo "Section: base" >> /pkg/DEBIAN/control
+          echo "Priority: optional" >> /pkg/DEBIAN/control
+          echo "Architecture: amd64" >> /pkg/DEBIAN/control
+          echo "Depends: libc6 (>= 2.15)" >> /pkg/DEBIAN/control
+          echo "Maintainer: Bas Steins <debian@bascodes.com>" >> /pkg/DEBIAN/control
+          echo "Description: Hello World" >> /pkg/DEBIAN/control
+          mkdir -p /pkg/usr/bin 
+          cp /usr/local/bin/helloworld /pkg/usr/bin/ 
+          dpkg-deb --build /pkg helloworld-${VERSION}.deb
 
       - name: Create Release
         id: create_release
