@@ -2,6 +2,6 @@
 #include <stdio.h>
 
 int main() {
-    printf("hello-world\n");
+    printf("hello-world version 2.0\n");
     return 0;
 }
