@@ -33,8 +33,9 @@ jobs:
     
       - name: Create Debian Package
         env:
-          VERSION: ${{ github.ref }}
+          VERSION: ${{  github.ref_name }}
         run: |
+          export VERSION="${VERSION:1}"
           sudo mkdir -p /pkg/DEBIAN
           sudo chmod a+rwx -R /pkg
           echo "Package: helloworld" > /pkg/DEBIAN/control
