@@ -1,4 +1,4 @@
-name: Build
+name: Run Dockerfile with APT Repo
 
 on:
     workflow_dispatch:
