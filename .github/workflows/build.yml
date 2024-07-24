@@ -49,7 +49,7 @@ jobs:
           mkdir -p /pkg/usr/bin 
           cp /usr/local/bin/helloworld /pkg/usr/bin/ 
           sudo chmod 0755 -R /pkg
-          sudo dpkg-deb --build /pkg helloworld-${GITHUB_REF_NAME}.deb
+          sudo dpkg-deb --build -Zgzip /pkg helloworld-${GITHUB_REF_NAME}.deb
           sudo chmod a+rwx helloworld-${GITHUB_REF_NAME}.deb
           cp /usr/local/bin/helloworld ./helloworld-${GITHUB_REF_NAME}
 
