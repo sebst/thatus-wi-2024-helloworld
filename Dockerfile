@@ -19,7 +19,7 @@ RUN mkdir -p build && cd build && \
     cmake --build . --target install
 
 # Create the source archive
-RUN tar -czvf helloworld-${VERSION}-source.tgz /src
+# RUN tar -czvf helloworld-${VERSION}-source.tgz /src
 
 # Create the Debian package
 RUN mkdir -p /pkg/DEBIAN && \
