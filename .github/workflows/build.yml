@@ -43,6 +43,7 @@ jobs:
           echo "Priority: optional" >> /pkg/DEBIAN/control
           echo "Architecture: amd64" >> /pkg/DEBIAN/control
           echo "Depends: libc6 (>= 2.15)" >> /pkg/DEBIAN/control
+          echo "Requires: zstd" >> /pkg/DEBIAN/control
           echo "Maintainer: Bas Steins <debian@bascodes.com>" >> /pkg/DEBIAN/control
           echo "Description: Hello World" >> /pkg/DEBIAN/control
           mkdir -p /pkg/usr/bin 
