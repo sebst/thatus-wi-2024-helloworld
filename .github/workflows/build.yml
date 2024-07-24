@@ -37,7 +37,7 @@ jobs:
         run: |
           export VERSION="${VERSION:1}"
           sudo mkdir -p /pkg/DEBIAN
-          sudo chmod a+rwx -R /pkg
+          sudo chmod 0755 -R /pkg
           echo "Package: helloworld" > /pkg/DEBIAN/control
           echo "Version: ${VERSION}" >> /pkg/DEBIAN/control
           echo "Section: base" >> /pkg/DEBIAN/control
