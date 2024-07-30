@@ -1,15 +1,15 @@
 Package: helloworld
-Version: 2.0.0
+Version: 3.0.0
 Architecture: amd64
 Depends: libc6 (>= 2.15)
 Requires: zstd
 Maintainer: Bas Steins <debian@bascodes.com>
 Priority: optional
 Section: base
-Filename: pool/main/h/helloworld/helloworld_2.0.0_amd64.deb
-Size: 2824
-SHA256: c42543631bbbf1b6bcede2d22917d5f0c19684e1fb3366e8a7ae4ef03aaebeae
-SHA1: 24b2481d8d03d4fc308eac9e1264e61a280d4ae6
-MD5sum: a4f581bdc81a3ac088dd2b5d1ca59ec8
+Filename: pool/main/h/helloworld/helloworld_3.0.0_amd64.deb
+Size: 2822
+SHA256: 154cdfe04195e9b90bd027a8eacc3d70c9bbfb4fcc42050230ca7823e22e8afb
+SHA1: 8c84645e9da415324b3329a9fa56c9cb889279c2
+MD5sum: 45b9c9e1eaee96420c7d88e68178cc45
 Description: Hello World
 

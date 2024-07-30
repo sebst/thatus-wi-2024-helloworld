@@ -1,17 +1,17 @@
 Codename: noble
-Date: Wed, 24 Jul 2024 22:00:00 UTC
+Date: Tue, 30 Jul 2024 20:00:55 UTC
 Architectures: amd64
 Components: main
 Description: sebst/thatus-wi-2024-helloworld
 MD5Sum:
- 4d63bb488029f9b31f6d79152ad47665 431 main/binary-amd64/Packages
- 92669642a3bc49e291d82673db3e3962 334 main/binary-amd64/Packages.gz
+ c6c8f2f6667960ca230a413454cac5ee 431 main/binary-amd64/Packages
+ 072f61ff4b03fc4897ea3783dd7ff620 335 main/binary-amd64/Packages.gz
  9bb8ad7833954f66c1d80851ea2e7418 81 main/binary-amd64/Release
 SHA1:
- 4eceb8517f479292451a12d0aa81b5a5d7211b9c 431 main/binary-amd64/Packages
- ef77ccb6c1d9f826ee3aef7fe7bfb65fa8efc3a1 334 main/binary-amd64/Packages.gz
+ e1cbc77a1d6afdab956489d034c2131f81077bbb 431 main/binary-amd64/Packages
+ 2563b11a2e49d68eb1ba8a9637d3e5a08b9cfb14 335 main/binary-amd64/Packages.gz
  7adf24c8880ba1c752f27a115faed1474e6f9149 81 main/binary-amd64/Release
 SHA256:
- c26fda91a733063f3d10c023c4ea39e309fcac48b36aab8a47c1b822efa96ecf 431 main/binary-amd64/Packages
- 95b86197700ba3d69d9d2c35b72168824b5e8f79792d0ebc107973d52ae546cb 334 main/binary-amd64/Packages.gz
+ 2b5fa059f800a50c29ee97d29cc4f4a49a597164bc1fe16abe25a59c95857ad1 431 main/binary-amd64/Packages
+ 263d792a9e33562189cea4a8e108a05f0d5fe9f3e1cae923bd73ed28dca697df 335 main/binary-amd64/Packages.gz
  1d3eeb52d9cf403fa6c7d6453e86da69060f3e7a0a6620f756b0fd55be6ead49 81 main/binary-amd64/Release
